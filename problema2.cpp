@@ -17,12 +17,12 @@ int main(){
 		}
 	}
 	cout<<"Arreglo par"<<endl;
-	for(int j=0; j<ip; j++){
-		cout<<B[j]<<" ";
+	for(int i=0; i<ip; i++){
+		cout<<B[i]<<" ";
 	}
 	cout<<"\nArreglo impar"<<endl;
-	for(int iii=0; iii<ii; iii++){
-		cout<<C[iii]<<" ";
+	for(int i=0; i<ii; i++){
+		cout<<C[i]<<" ";
 	}
 	return 0;
 }
