@@ -11,6 +11,10 @@ int main(){
 		cout<<"Temperatura maxima: "; cin>>max[i];
 		med[i]= (max[i]+min[i]) / 2;
 	}
+	cout<<"\tTemperatura media de cada dia"<<endl;
+	for(int i=1; i<7; i++){
+		cout<<"Dia "<<i+1<<": "<<med[i]<<" grados"<<endl;
+	}
 	int dia= men_tem(min, 7);
 	cout<<"El dia "<<dia+1<<" es la menor temperatura de toda la semana con "<<min[dia]<<" grados"<<endl;
 		
