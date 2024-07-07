@@ -3,6 +3,7 @@
 using namespace std;
 int com(string c1[], int a1, string c2[], int a2, string comu[]);
 void name(string c[], int b);
+void im_com(int n, string comun[]);
 int main(){
 	int t1;
 	cout<<"Cantidad de estudiantes de Fundamentos de Programacion: "; cin>>t1;
@@ -14,6 +15,9 @@ int main(){
 	string pg[t2];
 	cout<<"\tEstudiantes de Programacion Grafica"<<endl;
 	name(pg,t2);
+	string cm[t1+t2];
+	int cc=com(fp, t1, pg, t2, cm);
+	im_com(cc, cm);
 	return 0;
 }
 int com(string c1[], int a1, string c2[], int a2, string comu[]){
@@ -27,6 +31,18 @@ int com(string c1[], int a1, string c2[], int a2, string comu[]){
 		}
 	}
 	return k;
+}
+void im_com(int n, string comun[]){
+	if(n<=0){
+		cout<<"\nNo hay estudiantes comunes en ambos cursos"<<endl;
+	}
+	else{
+		cout<<"\tEstudiantes comunes"<<endl;
+		for(int i=0; i<n; i++){
+			cout<<comun[i]<<endl;
+		}
+		cout<<"Numero de estudiantes comunes en las asignaturas: "<<n<<endl;
+	}
 }
 void name(string c[], int b){
 	for(int i=0; i<b; i++){
