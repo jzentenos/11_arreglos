@@ -7,11 +7,17 @@ void im_com(int n, string comun[]);
 int main(){
 	int t1;
 	cout<<"Cantidad de estudiantes de Fundamentos de Programacion: "; cin>>t1;
+	while(t1<=0){
+		cout<<"Numero de estudiantes incorrecto. \nIngrese nuevamente: "; cin>>t1;
+	}
 	string fp[t1];
 	cout<<"\tEstudiantes de Fundamentos de Programacion"<<endl;
 	name(fp,t1);
 	int t2;
-	cout<<"Cantidad de estudiantes de Programacion Grafica: "; cin>>t2;	
+	cout<<"Cantidad de estudiantes de Programacion Grafica: "; cin>>t2;
+	while(t2<=0){
+		cout<<"Numero de estudiantes incorrecto. \nIngrese nuevamente: "; cin>>t2;
+	}
 	string pg[t2];
 	cout<<"\tEstudiantes de Programacion Grafica"<<endl;
 	name(pg,t2);
