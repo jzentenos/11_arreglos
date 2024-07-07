@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string.h>
+#include<cstdlib>
 using namespace std;
 int com(string c1[], int a1, string c2[], int a2, string comu[]);
 void name(string c[], int b);
@@ -8,6 +9,7 @@ int main(){
 	int t1;
 	cout<<"Cantidad de estudiantes de Fundamentos de Programacion: "; cin>>t1;
 	while(t1<=0){
+		system("cls");
 		cout<<"Numero de estudiantes incorrecto. \nIngrese nuevamente: "; cin>>t1;
 	}
 	string fp[t1];
@@ -16,14 +18,18 @@ int main(){
 	int t2;
 	cout<<"Cantidad de estudiantes de Programacion Grafica: "; cin>>t2;
 	while(t2<=0){
+		system("cls");
 		cout<<"Numero de estudiantes incorrecto. \nIngrese nuevamente: "; cin>>t2;
 	}
 	string pg[t2];
 	cout<<"\tEstudiantes de Programacion Grafica"<<endl;
 	name(pg,t2);
+	system("cls");
 	string cm[t1+t2];
 	int cc=com(fp, t1, pg, t2, cm);
 	im_com(cc, cm);
+	cout<<"\n";
+	system("pause");
 	return 0;
 }
 int com(string c1[], int a1, string c2[], int a2, string comu[]){
