@@ -5,6 +5,10 @@ int main(){
 	int n;
 	//Lectura del tamaño del arreglo
 	cout<<"Ingrese el tamaño del arreglo: "; cin>>n;
+	//Validacion del tamaño del arreglo
+	while(n<=0){
+		cout<<"Dato invalido \nIngrese nuevamente: "; cin>>n;
+	}
 	int A[n], m;
 	//Lectura del multiplo a rellenar 
 	cout<<"Ingrese un numero: "; cin>>m;
