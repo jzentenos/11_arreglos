@@ -12,6 +12,11 @@ int main(){
 	int A[n], m;
 	//Lectura del multiplo a rellenar 
 	cout<<"Ingrese un numero: "; cin>>m;
+	//Validacion del numero que se usa para calcular multiplos
+	while(m<=0){
+		cout<<"Dato incorrecto \nIngrese nuevamente: "; cin>>m;
+	}
+	//Llamado a la funcion
 	rellena(A, n, m);
 	//Imprime el arreglo llenado de multiplos de m
 	cout<<"\tArreglo llenado con multiplos de "<<m<<endl;
