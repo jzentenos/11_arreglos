@@ -2,13 +2,18 @@
 #include<string.h>
 using namespace std;
 int com(string c1[], int a1, string c2[], int a2, string comu[]);
+void name(string c[], int b);
 int main(){
 	int t1;
 	cout<<"Cantidad de estudiantes de Fundamentos de Programacion: "; cin>>t1;
 	string fp[t1];
+	cout<<"\tEstudiantes de Fundamentos de Programacion"<<endl;
+	name(fp,t1);
 	int t2;
 	cout<<"Cantidad de estudiantes de Programacion Grafica: "; cin>>t2;	
 	string pg[t2];
+	cout<<"\tEstudiantes de Programacion Grafica"<<endl;
+	name(pg,t2);
 	return 0;
 }
 int com(string c1[], int a1, string c2[], int a2, string comu[]){
@@ -23,4 +28,8 @@ int com(string c1[], int a1, string c2[], int a2, string comu[]){
 	}
 	return k;
 }
-
+void name(string c[], int b){
+	for(int i=0; i<b; i++){
+		cout<<"Nombre del estudiante "<<i+1<<": "; cin>>c[i];
+	}
+}
