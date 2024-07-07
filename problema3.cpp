@@ -12,6 +12,11 @@ int main(){
 	for(int i=0; i<7; i++){
 		cout<<"Dia "<<i+1<<"\nTemperatura minima: "; cin>>min[i];
 		cout<<"Temperatura maxima: "; cin>>max[i];
+		while(min[i]>max[i]){
+			cout<<"La temperatura minima no debe ser mayor a la maxima"<<endl;
+			cout<<"Ingrese nuevamente la temperatura minima: "; cin>>min[i];
+			cout<<"Ingrese nuevamente la temperatura maxima: "; cin>>max[i];
+		}
 		med[i]= (max[i]+min[i]) / 2;
 	}
 	system("cls");
